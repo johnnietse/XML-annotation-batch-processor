@@ -1,0 +1,37 @@
+<annotation>
+	<folder>my-project-name</folder>
+	<filename>team43_07.jpg</filename>
+	<path>/my-project-name/team43_07.jpg</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>4032</width>
+		<height>3024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>sign_stop</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>841</xmin>
+			<ymin>859</ymin>
+			<xmax>1726</xmax>
+			<ymax>2165</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>sign_oneway_left</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2350</xmin>
+			<ymin>961</ymin>
+			<xmax>3437</xmax>
+			<ymax>2150</ymax>
+		</bndbox>
+	</object>
+</annotation>

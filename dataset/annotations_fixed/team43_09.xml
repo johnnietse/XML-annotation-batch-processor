@@ -1,0 +1,37 @@
+<annotation>
+	<folder>my-project-name</folder>
+	<filename>team43_09.jpg</filename>
+	<path>/my-project-name/team43_09.jpg</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>4032</width>
+		<height>3024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>sign_noentry</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>580</xmin>
+			<ymin>497</ymin>
+			<xmax>1595</xmax>
+			<ymax>1889</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>sign_oneway_right</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2364</xmin>
+			<ymin>540</ymin>
+			<xmax>3510</xmax>
+			<ymax>1933</ymax>
+		</bndbox>
+	</object>
+</annotation>
