@@ -44,6 +44,14 @@ This tool supports development of our vehicle's perception system by:
 
 ## Usage
 
+### Quick Start
+Clone the Repository
+```bash
+git clone https://github.com/johnnietse/XML-annotation-batch-processor.git
+cd XML-annotation-batch-processor
+```
+
+### Continuation from Quick Start
 1. Update the input/output paths in the script (edit these lines in the script):
    ```python
    input_folder = "path/to/your/input/annotations" # Folder with raw XMLs
@@ -58,9 +66,18 @@ This tool supports development of our vehicle's perception system by:
 3. Processed files will be saved in the output directory
 
 Example Folder Structure
-your_dataset/
-├── annotations/          # Original annotation files
-└── annotations_fixed/    # Processed files (created automatically)
+
+XML-annotation-batch-processor/
+├── dataset/
+│      ├── annotations/          # Original annotation files
+│      ├── annotations_fixed/    # Processed annotation files (created automatically)
+│      └── images/               # the dataset
+├── main.py                      # Python Script          
+└── README.md
+
+
+
+
 
 4. Done - Your rounded annotations will appear in the output folder with the following output shown in the terminal:
 ```bash
