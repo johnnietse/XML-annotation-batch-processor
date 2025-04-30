@@ -9,9 +9,11 @@ This tool processes XML annotation files and rounds the `xmin`, `ymin`, `xmax`, 
 
 ## How did I initially come up with this idea?
 - Developed to solve the specific challenge in training our vehicle's object detection model in our autonomous vehicle dataset pipeline as a part of my Level 4 Autonomous Vehicle course project at Queen's University:
-  - **Manual Effort Reduction**: Process annotations from multiple .xml files with one command
-  - **Pipeline Integration**: Process model-ready datasets from LabelImg/Make Sense exports
-- 🚫 Discovered Google Colab throws errors with decimal values in XML annotations during model training  
+  - **Manual Effort Reduction**: Aim to process annotations from multiple .xml files with one command
+  - **Pipeline Integration**: Aim to process model-ready datasets from LabelImg/Make Sense exports
+- **Manual editing limitations**: Manually editing 500+ XML files individually is error-prone and time-consuming  
+- **Automotive-scale needs**: Real-world vehicle datasets require batch processing capabilities. Manual annotation adjustment is infeasible for large datasets 
+- 🚫 Discovered Google Colab throws errors with decimal values in XML annotations during model training 
 - ⚡ Created to automatically convert floating-point coordinates to integers for Google Colab compatibility
 - Pixel Coordinates: Object detection models expect integer positions (whole pixels)
 - TFOD Parsing: tf.train.Example requires int64 for bounding boxes
@@ -28,14 +30,11 @@ This tool supports development of our vehicle's perception system by:
 
 
 ## Features
-- Rounds all bounding box coordinates to nearest integer
+- 🎯 Precision handling: Rounds all bounding box coordinates (xmin, ymin, xmax, ymax) to nearest integer
 - Preserves XML structure while updating coordinates
-- Handles invalid coordinate values gracefully
+- ⚠️ Error skipping: Ignores bad values while processing other files and handles invalid coordinate values gracefully
 - Processes entire directories of XML files
-- Creates output directory automatically if needed
-- 🔄 Automatic folder creation: Makes the output folder if it doesn't exist
-- 🎯 Precision handling: Rounds xmin, ymin, xmax, ymax to integers
-- ⚠️ Error skipping: Ignores bad values while processing other files
+- 🔄 Automatic folder creation: - Creates output directory automatically if it doesn't exist
 - 🧹 Non-destructive: Never modifies your original files
 
 ## Prerequisites
@@ -81,7 +80,7 @@ Requirements
 Python 3.x (no additional libraries needed)
 
 ## What It Solves
-- 🛠️ **No more manual edits**: Avoid opening individual XML files to fix coordinates
+- 🛠️ **Avoid opening individual XML files to fix coordinates**
 - ⚡ **Instant processing**: Convert hundreds of files in seconds
 - 📂 **Clean workflow**: Keeps original files intact while saving corrected versions to a new folder
 
@@ -94,11 +93,8 @@ Python 3.x (no additional libraries needed)
 
 ## Why This Exists
 Created for those moments when you realize:
-
 - Your annotation tool exported fractional coordinates
-- You need integer values for your object detection model
-- **Manual editing limitations**: Manually editing 500+ XML files individually is error-prone and time-consuming  
-- **Automotive-scale needs**: Real-world vehicle datasets require batch processing capabilities. Manual annotation adjustment is infeasible for large datasets  
+- You need integer values for your object detection model 
 - **Format compliance**: Ensures Google Colab-compatible integer coordinates consistently  
 
 ---
