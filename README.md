@@ -64,10 +64,20 @@ your_dataset/
 
 4. Done - Your rounded annotations will appear in the output folder with the following output shown in the terminal:
 ```bash
-Processed 248 files
-Updated car_001.xml -> your/cleaned/annotations/car_001.xml
-Updated traffic_light_042.xml -> your/cleaned/annotations/traffic_light_042.xml
+C:\Users\Johnnie\AppData\Local\Programs\Python\Python310\python.exe C:\Users\Johnnie\PycharmProjects\XML-annotation-batch-processor\main.py 
+Updated team01_001.xml -> dataset/annotations_fixed\team01_001.xml
+Updated team01_002.xml -> dataset/annotations_fixed\team01_002.xml
+Updated team01_003.xml -> dataset/annotations_fixed\team01_003.xml
+Updated team01_004.xml -> dataset/annotations_fixed\team01_004.xml
+Updated team01_005.xml -> dataset/annotations_fixed\team01_005.xml
+Updated team01_006.xml -> dataset/annotations_fixed\team01_006.xml
+Updated team01_007.xml -> dataset/annotations_fixed\team01_007.xml
+Updated team01_008.xml -> dataset/annotations_fixed\team01_008.xml
+Updated team01_009.xml -> dataset/annotations_fixed\team01_009.xml
+Updated team01_010.xml -> dataset/annotations_fixed\team01_010.xml
+Updated team01_011.xml -> dataset/annotations_fixed\team01_011.xml
 ...
+Process finished with exit code 0
 ```
 
 Notes:
@@ -76,8 +86,6 @@ Notes:
 - Tested with standard PASCAL VOC format XML files
 - Output files maintain the same naming convention as input files
 
-Requirements
-Python 3.x (no additional libraries needed)
 
 ## What It Solves
 - 🛠️ **Avoid opening individual XML files to fix coordinates**
