@@ -104,3 +104,7 @@ Created for those moments when you realize:
 - **Format compliance**: Ensures Google Colab-compatible integer coordinates consistently  
 
 
+**Important:** The datasets processed by this tool belong to and remain the intellectual property of respective groups from the Queen's University Level 4 Autonomous Vehicle course. This program neither claims ownership nor provides rights to redistribute these datasets. All annotation files are used with explicit permission for academic project purposes only.
+
+
+
