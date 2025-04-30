@@ -67,6 +67,7 @@ cd XML-annotation-batch-processor
 
 Example Folder Structure
 
+<pre>
 XML-annotation-batch-processor/
 ├── dataset/
 │      ├── annotations/          # Original annotation files
@@ -74,7 +75,7 @@ XML-annotation-batch-processor/
 │      └── images/               # the dataset
 ├── main.py                      # Python Script          
 └── README.md
-
+</pre>
 
 
 
