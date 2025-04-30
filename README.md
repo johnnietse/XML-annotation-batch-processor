@@ -8,7 +8,7 @@ This tool processes XML annotation files and rounds the `xmin`, `ymin`, `xmax`, 
 
 
 ## How did I initially come up with this idea?
-- Developed to solve the specific challenge in training our vehicle's object detection system in our autonomous vehicle dataset pipeline as a part of my Level 4 Autonomous Vehicle course project at Queen's University:
+- Developed to solve the specific challenge in training our vehicle's object detection model in our autonomous vehicle dataset pipeline as a part of my Level 4 Autonomous Vehicle course project at Queen's University:
   - **Manual Effort Reduction**: Process annotations from multiple .xml files with one command
   - **Pipeline Integration**: Process model-ready datasets from LabelImg/Make Sense exports
 - 🚫 Discovered Google Colab throws errors with decimal values in XML annotations during model training  
