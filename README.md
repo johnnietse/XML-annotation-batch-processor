@@ -106,3 +106,12 @@ Created for those moments when you realize:
 **Important:** The datasets processed by this tool belong to and remain the intellectual property of respective groups from the Queen's University Level 4 Autonomous Vehicle course. This program neither claims ownership nor provides rights to redistribute these datasets. All annotation files are used with explicit permission for academic project purposes only.
 
 
+
+
+## Copyright Notice
+- Datasets: © Copyright 2025 by original creator groups
+- Commercial use/replication of data prohibited without written consent
+
+**Important Clarifications**:
+- Dataset copyright remains with original owners (see [Copyright Notice](#copyright-notice)
+
