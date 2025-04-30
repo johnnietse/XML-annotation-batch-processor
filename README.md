@@ -108,7 +108,7 @@ Created for those moments when you realize:
 
 
 
-## Copyright Notice
+## Copyright Notice -> #copyright-notice
 - Datasets: © Copyright 2025 by original creator groups
 - Commercial use/replication of data prohibited without written consent
 
