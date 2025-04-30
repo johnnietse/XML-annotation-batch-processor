@@ -88,9 +88,9 @@ Python 3.x (no additional libraries needed)
 
 ## Why Round Coordinates?
 - Some computer vision frameworks require integer coordinates for bounding boxes. This script helps:
-- Remove decimal precision from annotation tools
-- Fix potential rendering issues in visualization tools
-- Ensure compatibility with strict coordinate requirements
+  - Remove decimal precision from annotation tools
+  - Fix potential rendering issues in visualization tools
+  - Ensure compatibility with strict coordinate requirements
 
 ## Why This Exists
 Created for those moments when you realize:
