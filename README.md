@@ -11,13 +11,13 @@ This tool processes XML annotation files and rounds the `xmin`, `ymin`, `xmax`, 
 - Developed to solve the specific challenge in training our vehicle's object detection model in our autonomous vehicle dataset pipeline as a part of my Level 4 Autonomous Vehicle course project at Queen's University:
   - **Manual Effort Reduction**: Aim to process annotations from multiple .xml files with one command
   - **Pipeline Integration**: Aim to process model-ready datasets from LabelImg/Make Sense exports
-- **Manual editing limitations**: Manually editing 500+ XML files individually is error-prone and time-consuming  
-- **Automotive-scale needs**: Real-world vehicle datasets require batch processing capabilities. Manual annotation adjustment is infeasible for large datasets 
-- 🚫 Discovered Google Colab throws errors with decimal values in XML annotations during model training 
-- ⚡ Created to automatically convert floating-point coordinates to integers for Google Colab compatibility
-- Pixel Coordinates: Object detection models expect integer positions (whole pixels)
-- TFOD Parsing: tf.train.Example requires int64 for bounding boxes
-- Annotation Consistency: Mixed float/int values cause shape mismatches
+  - **Manual editing limitations**: Manually editing 500+ XML files individually is error-prone and time-consuming  
+  - **Automotive-scale needs**: Real-world vehicle datasets require batch processing capabilities. Manual annotation adjustment is infeasible for large datasets 
+  - 🚫 Discovered Google Colab throws errors with decimal values in XML annotations during model training 
+  - ⚡ Created to automatically convert floating-point coordinates to integers for Google Colab compatibility
+  - **Pixel Coordinates**: Object detection models expect integer positions (whole pixels)
+  - **TFOD (TensorFlow Object Detection) Parsing**: tf.train.Example requires int64 for bounding boxes
+  - **Annotation Consistency**: Mixed float/int values cause shape mismatches
 
 
 ## 🚗 Project Context
