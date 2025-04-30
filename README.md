@@ -71,7 +71,7 @@ Example Folder Structure
 XML-annotation-batch-processor/
 ├── dataset/
 │      ├── annotations/          # Original annotation files
-│      ├── annotations_fixed/    # Processed annotation files (created automatically)
+│      ├── annotations_fixed/    # Processed annotation files in the output directory (created automatically)
 │      └── images/               # the dataset
 ├── main.py                      # Python Script          
 └── README.md
@@ -135,5 +135,5 @@ Created for those moments when you realize:
 - Commercial use/replication of data prohibited without written consent
 
 **Important Clarifications**:
-- Dataset copyright remains with original owners (see [Copyright Notice](#copyright-notice)
+- Dataset copyright remains with original owners (see [Copyright Notice](#copyright-notice))
 
