@@ -8,7 +8,7 @@ This tool processes XML annotation files and rounds the `xmin`, `ymin`, `xmax`, 
 
 
 ## How did I initially come up with this idea?
-- Developed to solve the specific challenge in training our vehicle's object detection model in our autonomous vehicle dataset pipeline as a part of my Level 4 Autonomous Vehicle course project at Queen's University (Check it out [MyOtherRepo](https://github.com/johnnietse/L4-autonomous-object-detection-model-training.git)):
+- Developed to solve the specific challenge in training our vehicle's object detection model in our autonomous vehicle dataset pipeline as a part of my Level 4 Autonomous Vehicle course project at Queen's University (Check it out - [MyOtherRepo](https://github.com/johnnietse/L4-autonomous-object-detection-model-training.git)):
   - **Manual Effort Reduction**: Aim to process annotations from multiple .xml files with one command
   - **Pipeline Integration**: Aim to process model-ready datasets from LabelImg/Make Sense exports
   - **Manual editing limitations**: Manually editing 500+ XML files individually is error-prone and time-consuming  
