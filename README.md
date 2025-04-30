@@ -1,4 +1,4 @@
-# XML Annotation Batch Processor
+# XML Annotation Batch Processing Script
 
 A lightweight Python script to automatically round bounding box coordinates in XML files (PASCAL VOC format) to integer values **without opening them manually**. Processes entire folders of annotations with one click.
 
