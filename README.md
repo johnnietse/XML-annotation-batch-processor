@@ -53,15 +53,15 @@ cd XML-annotation-batch-processor
 
 ### Continuation from Quick Start
 1. Update the input/output paths in the script (edit these lines in the script):
-   ```python
-   input_folder = "path/to/your/input/annotations" # Folder with raw XMLs
-   output_folder = "path/to/your/output/annotations_fixed" # New folder for corrected files
-   ```
+```python
+input_folder = "path/to/your/input/annotations" # Folder with raw XMLs
+output_folder = "path/to/your/output/annotations_fixed" # New folder for corrected files
+```
 
 2. Run the script:
-  ```bash
-  python main.py
-  ```
+```bash
+python main.py
+```
 
 3. Processed files will be saved in the output directory
 
