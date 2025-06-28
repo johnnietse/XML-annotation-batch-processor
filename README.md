@@ -70,9 +70,9 @@ Example Folder Structure
 <pre>
 XML-annotation-batch-processor/
 ├── dataset/
-│      ├── annotations/          # Original annotation files
-│      ├── annotations_fixed/    # Processed annotation files in the output directory (created automatically)
-│      └── images/               # the dataset
+│   ├── annotations/          # Original annotation files
+│   ├── annotations_fixed/    # Processed annotation files in the output directory (created automatically)
+│   └── images/               # the dataset
 ├── main.py                      # Python Script          
 └── README.md
 </pre>
