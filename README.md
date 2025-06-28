@@ -1,4 +1,4 @@
-# XML Annotation Batch Processor
+# XML Annotation Batch Processing Script
 
 A lightweight Python script to automatically round bounding box coordinates in XML files (PASCAL VOC format) to integer values **without opening them manually**. Processes entire folders of annotations with one click.
 
@@ -8,14 +8,16 @@ This tool processes XML annotation files and rounds the `xmin`, `ymin`, `xmax`, 
 
 
 ## How did I initially come up with this idea?
-- Developed to solve the specific challenge in training our vehicle's object detection model in our autonomous vehicle dataset pipeline as a part of my Level 4 Autonomous Vehicle course project at Queen's University:
-  - **Manual Effort Reduction**: Process annotations from multiple .xml files with one command
-  - **Pipeline Integration**: Process model-ready datasets from LabelImg/Make Sense exports
-- 🚫 Discovered Google Colab throws errors with decimal values in XML annotations during model training  
-- ⚡ Created to automatically convert floating-point coordinates to integers for Google Colab compatibility
-- Pixel Coordinates: Object detection models expect integer positions (whole pixels)
-- TFOD Parsing: tf.train.Example requires int64 for bounding boxes
-- Annotation Consistency: Mixed float/int values cause shape mismatches
+- Developed to solve the specific challenge in training our vehicle's object detection model in our autonomous vehicle dataset pipeline as a part of my Level 4 Autonomous Vehicle course project at Queen's University (Check it out - [MyOtherRepo](https://github.com/johnnietse/L4-autonomous-object-detection-model-training.git)):
+  - **Manual Effort Reduction**: Aim to process annotations from multiple .xml files with one command
+  - **Pipeline Integration**: Aim to process model-ready datasets from LabelImg/Make Sense exports
+  - **Manual editing limitations**: Manually editing 500+ XML files individually is error-prone and time-consuming  
+  - **Automotive-scale needs**: Real-world vehicle datasets require batch processing capabilities. Manual annotation adjustment is infeasible for large datasets 
+  - 🚫 Discovered Google Colab throws errors with decimal values in XML annotations during model training 
+  - ⚡ Created to automatically convert floating-point coordinates to integers for Google Colab compatibility
+  - **Pixel Coordinates**: Object detection models expect integer positions (whole pixels)
+  - **TFOD (TensorFlow Object Detection) Parsing**: tf.train.Example requires int64 for bounding boxes
+  - **Annotation Consistency**: Mixed float/int values cause shape mismatches
 
 
 ## 🚗 Project Context
@@ -28,14 +30,11 @@ This tool supports development of our vehicle's perception system by:
 
 
 ## Features
-- Rounds all bounding box coordinates to nearest integer
+- 🎯 Precision handling: Rounds all bounding box coordinates (xmin, ymin, xmax, ymax) to nearest integer
 - Preserves XML structure while updating coordinates
-- Handles invalid coordinate values gracefully
+- ⚠️ Error skipping: Ignores bad values while processing other files and handles invalid coordinate values gracefully
 - Processes entire directories of XML files
-- Creates output directory automatically if needed
-- 🔄 Automatic folder creation: Makes the output folder if it doesn't exist
-- 🎯 Precision handling: Rounds xmin, ymin, xmax, ymax to integers
-- ⚠️ Error skipping: Ignores bad values while processing other files
+- 🔄 Automatic folder creation: - Creates output directory automatically if it doesn't exist
 - 🧹 Non-destructive: Never modifies your original files
 
 ## Prerequisites
@@ -45,30 +44,59 @@ This tool supports development of our vehicle's perception system by:
 
 ## Usage
 
+### Quick Start
+Clone the Repository
+```bash
+git clone https://github.com/johnnietse/XML-annotation-batch-processor.git
+cd XML-annotation-batch-processor
+```
+
+### Continuation from Quick Start
 1. Update the input/output paths in the script (edit these lines in the script):
-   ```python
-   input_folder = "path/to/your/input/annotations" # Folder with raw XMLs
-   output_folder = "path/to/your/output/annotations_fixed" # New folder for corrected files
-   ```
+```python
+input_folder = "path/to/your/input/annotations" # Folder with raw XMLs
+output_folder = "path/to/your/output/annotations_fixed" # New folder for corrected files
+```
 
 2. Run the script:
-  ```bash
-  python main.py
-  ```
+```bash
+python main.py
+```
 
 3. Processed files will be saved in the output directory
 
 Example Folder Structure
-your_dataset/
-├── annotations/          # Original annotation files
-└── annotations_fixed/    # Processed files (created automatically)
+
+<pre>
+XML-annotation-batch-processor/
+├── .idea/
+├── dataset/
+│   ├── annotations/          # Original annotation files
+│   ├── annotations_fixed/    # Processed annotation files in the output directory (created automatically)
+│   └── images/               # the dataset
+├── README.md                 # Python Script          
+└── main.py
+</pre>
+
+
+
 
 4. Done - Your rounded annotations will appear in the output folder with the following output shown in the terminal:
 ```bash
-Processed 248 files
-Updated car_001.xml -> your/cleaned/annotations/car_001.xml
-Updated traffic_light_042.xml -> your/cleaned/annotations/traffic_light_042.xml
+C:\Users\Johnnie\AppData\Local\Programs\Python\Python310\python.exe C:\Users\Johnnie\PycharmProjects\XML-annotation-batch-processor\main.py 
+Updated team01_001.xml -> dataset/annotations_fixed\team01_001.xml
+Updated team01_002.xml -> dataset/annotations_fixed\team01_002.xml
+Updated team01_003.xml -> dataset/annotations_fixed\team01_003.xml
+Updated team01_004.xml -> dataset/annotations_fixed\team01_004.xml
+Updated team01_005.xml -> dataset/annotations_fixed\team01_005.xml
+Updated team01_006.xml -> dataset/annotations_fixed\team01_006.xml
+Updated team01_007.xml -> dataset/annotations_fixed\team01_007.xml
+Updated team01_008.xml -> dataset/annotations_fixed\team01_008.xml
+Updated team01_009.xml -> dataset/annotations_fixed\team01_009.xml
+Updated team01_010.xml -> dataset/annotations_fixed\team01_010.xml
+Updated team01_011.xml -> dataset/annotations_fixed\team01_011.xml
 ...
+Process finished with exit code 0
 ```
 
 Notes:
@@ -77,11 +105,9 @@ Notes:
 - Tested with standard PASCAL VOC format XML files
 - Output files maintain the same naming convention as input files
 
-Requirements
-Python 3.x (no additional libraries needed)
 
 ## What It Solves
-- 🛠️ **No more manual edits**: Avoid opening individual XML files to fix coordinates
+- 🛠️ **Avoid opening individual XML files to fix coordinates**
 - ⚡ **Instant processing**: Convert hundreds of files in seconds
 - 📂 **Clean workflow**: Keeps original files intact while saving corrected versions to a new folder
 
@@ -94,13 +120,8 @@ Python 3.x (no additional libraries needed)
 
 ## Why This Exists
 Created for those moments when you realize:
-
 - Your annotation tool exported fractional coordinates
-- You need integer values for your object detection model
-- Manually editing 500+ XML files sounds like hell
-
-- **Manual editing limitations**: Manually editing 500+ XML files individually is error-prone and time-consuming  
-- **Automotive-scale needs**: Real-world vehicle datasets require batch processing capabilities. Manual annotation adjustment is infeasible for large datasets  
+- You need integer values for your object detection model 
 - **Format compliance**: Ensures Google Colab-compatible integer coordinates consistently  
 
 ---
@@ -108,15 +129,12 @@ Created for those moments when you realize:
 **Important:** The datasets processed by this tool belong to and remain the intellectual property of respective groups from the Queen's University Level 4 Autonomous Vehicle course. This program neither claims ownership nor provides rights to redistribute these datasets. All annotation files are used with explicit permission for academic project purposes only.
 
 
+
+
 ## Copyright Notice
 - Datasets: © Copyright 2025 by original creator groups
-- Script: MIT License
 - Commercial use/replication of data prohibited without written consent
 
-
-This codebase is licensed under [MIT License](LICENSE) - free to use, modify, and distribute. 
-
 **Important Clarifications**:
-- Applies only to the source code/scripts in this repository
-- Does NOT apply to any datasets or annotation files
-- Dataset copyright remains with original owners (see [Copyright Notice](#copyright-notice)
+- Dataset copyright remains with original owners (see [Copyright Notice](#copyright-notice))
+
