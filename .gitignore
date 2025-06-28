@@ -1,0 +1,4 @@
+# Avoid PyCharm project settings from pushing onto github for privacy reason
+# Ignore everything in .idea except runConfigurations
+.idea/*
+!.idea/runConfigurations/
