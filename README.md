@@ -138,3 +138,8 @@ Created for those moments when you realize:
 **Important Clarifications**:
 - Dataset copyright remains with original owners (see [Copyright Notice](#copyright-notice))
 
+---
+
+## License
+This project is licensed under the MIT License. See LICENSE file for details.
+
